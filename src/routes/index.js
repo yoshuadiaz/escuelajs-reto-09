@@ -23,6 +23,7 @@ const platziStore = (app) => {
       const storeProducts = await productService.getProducts()
       res.status(200).json(storeProducts);
     } catch (error) {
+      console.error(error)
       res.status(500).end()
     }
   });
